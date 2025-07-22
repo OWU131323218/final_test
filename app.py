@@ -3,10 +3,11 @@ import streamlit as st
 import google.generativeai as genai
 
 # Gemini APIキーの設定
-genai.configure(api_key="AIzaSyDrVm4jKIc806ElZepC5gPCzEMIUKaOMtk")
+api_key = st.secrets["GEMINI_API_KEY"]
 
-# モデルの準備
-model = genai.GenerativeModel("gemini-pro")
+# Gemini APIの設定
+genai.configure(api_key=api_key)
+model = genai.GenerativeModel('gemini-2.0-flash-lite')
 
 # Streamlit UI
 st.title("冷蔵庫の中身でレシピ提案アプリ 🍳")
