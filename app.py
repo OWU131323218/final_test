@@ -3,7 +3,7 @@ import streamlit as st
 import google.generativeai as genai
 
 # Gemini APIキーの設定
-genai.configure(GEMINI_API_KYE="AIzaSyDrVm4jKIc806ElZepC5gPCzEMIUKaOMtk")
+genai.configure(api_key="AIzaSyDrVm4jKIc806ElZepC5gPCzEMIUKaOMtk")
 
 # モデルの準備
 model = genai.GenerativeModel("gemini-pro")
