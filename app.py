@@ -9,9 +9,9 @@ genai.configure(api_key=api_key)
 model = genai.GenerativeModel('gemini-2.0-flash-lite')
 
 # Streamlit UI
-st.title("冷蔵庫の中身でレシピ提案アプリ 🍳")
+st.title("レシピ提案アプリ 🍳")
 
-ingredients = st.text_input("冷蔵庫にある食材を入力してください（例：卵、トマト、チーズ）")
+ingredients = st.text_input("使う食材を入力してください（例：卵、トマト、チーズ）")
 servings = st.number_input("何人分のレシピが必要ですか？", min_value=1, max_value=10, value=2)
 cuisine_type = st.selectbox("レシピの種類を選んでください", ["指定なし", "和食", "洋食", "中華", "イタリアン", "韓国料理"])
 
